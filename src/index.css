@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #111111;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --blue: #4d73aa;
+  --blue-mid: #91add3;
+  --blue-pale: #e8f0f9;
+  --warm: #f4f2ee;
+  --muted: #666a70;
+  --line: #dedede;
+  --page-width: 1320px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+img { display: block; max-width: 100%; }
+
+
+/* =====================================
+   LOGO DESIGN CATEGORY
+   3 cards per row
+===================================== */
+
+.detail-page .logo-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 20px;
+  width: 100%;
+}
+
+.detail-page .logo-category-grid .project-card {
+  min-width: 0;
+}
+
+.detail-page .logo-category-grid .artwork-link {
+  width: 100%;
+  height: 160px;
+  aspect-ratio: auto;
+  overflow: hidden;
+}
+
+.detail-page .logo-category-grid .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* =====================================
+   GESTALT DETAIL PAGES
+   3 cards on top, 2 centered below
+   Same layout for all five principles
+===================================== */
+
+.detail-page .gestalt-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px 20px;
+  width: 100%;
+}
+
+.detail-page .gestalt-grid .project-card {
+  grid-column: span 2;
+  min-width: 0;
+}
+
+/* Center the two cards on the second row */
+.detail-page .gestalt-grid .project-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.detail-page .gestalt-grid .project-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.detail-page .gestalt-grid .artwork-link {
+  width: 100%;
+  height: 180px;
+  aspect-ratio: auto;
+  overflow: hidden;
+}
+
+.detail-page .gestalt-grid .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* =====================================
+   RESPONSIVE LAYOUT
+===================================== */
+
+@media (max-width: 900px) {
+  .detail-page .logo-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detail-page .gestalt-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detail-page .gestalt-grid .project-card,
+  .detail-page .gestalt-grid .project-card:nth-child(4),
+  .detail-page .gestalt-grid .project-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .detail-page .logo-category-grid,
+  .detail-page .gestalt-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .detail-page .logo-category-grid .artwork-link {
+    height: 180px;
+  }
+
+  .detail-page .gestalt-grid .artwork-link {
+    height: 200px;
+  }
+}
+
+/* UI Design: portrait 9:16 gallery */
+.detail-page .ui-design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 22px;
+}
+
+.detail-page .ui-design-grid .artwork-link {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  height: auto;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.detail-page .ui-design-grid .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.detail-page .ui-design-grid .project-card h2 {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .detail-page .ui-design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .detail-page .ui-design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+}
+
+/* UI Design: portrait 9:16 gallery */
+.detail-page .ui-design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 22px;
+}
+
+.detail-page .ui-design-grid .artwork-link {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  height: auto;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.detail-page .ui-design-grid .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.detail-page .ui-design-grid .project-card h2 {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .detail-page .ui-design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .detail-page .ui-design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+}
+
+/* UI Design: portrait 9:16 gallery */
+.detail-page .ui-design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 22px;
+}
+
+.detail-page .ui-design-grid .artwork-link {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  height: auto;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.detail-page .ui-design-grid .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.detail-page .ui-design-grid .project-card h2 {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .detail-page .ui-design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .detail-page .ui-design-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+}
+
+/* Shared UI and UX portfolio layout */
+.detail-page .ui-project-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 100%;
+}
+
+.detail-page .ui-project-group {
+  width: 100%;
+  min-width: 0;
+}
+
+.detail-page .ui-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  align-items: start;
+}
+
+.detail-page .ui-image-frame {
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.detail-page .ui-image-frame .project-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.detail-page .ui-project-title {
+  margin: 14px 0 4px;
+}
+
+.detail-page .ui-project-description {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .detail-page .ui-image-grid {
+    gap: 10px;
+  }
+}
