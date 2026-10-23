@@ -36,7 +36,7 @@ const logoItems = [
     title: 'Proximity',
     description: '',
     image: 'https://drive.google.com/thumbnail?id=1CroAJ5taPsdHGmI62O32BNnUjs5GtnUD&sz=w1200',
-      images: [
+    images: [
       'https://drive.google.com/thumbnail?id=1WJOueteUa9YRxsU-6OlWnj3WiMRrQUtM&sz=w1200',
       'https://drive.google.com/thumbnail?id=1f--ZOByjpMEScbhV4Bv6HEZCEtDx-4Ai&sz=w1200',
       'https://drive.google.com/thumbnail?id=14PM_G40hsKmZv0AVaQKnXwyNQiAecNru&sz=w1200',
@@ -46,7 +46,7 @@ const logoItems = [
     title: 'Symmetry',
     description: '',
     image: 'https://drive.google.com/thumbnail?id=1CroAJ5taPsdHGmI62O32BNnUjs5GtnUD&sz=w1200',
-      images: [
+    images: [
       'https://drive.google.com/thumbnail?id=1R3EYg0FCvNivonAjh6ZtDs7ptS2VxXYv&sz=w1200',
       'https://drive.google.com/thumbnail?id=1nzMLIqJXeki2K6C0yVz6H8-M0Xx16vCn&sz=w1200',
       'https://drive.google.com/thumbnail?id=1UYkLj4unpzmnMGVTtMAZshC5Rs03uWC4&sz=w1200',
@@ -55,7 +55,8 @@ const logoItems = [
   {
     title: 'Figure-Ground',
     description: '',
-      images: [
+    image: 'https://drive.google.com/thumbnail?id=1-ZCEpsfqdqYRQzhdkmi2MOYkCtlFkig6&sz=w1200',
+    images: [
       'https://drive.google.com/thumbnail?id=1mBOQX9SJ8kBT7d6bjYrsjcGnx8wBLl-c&sz=w1200',
       'https://drive.google.com/thumbnail?id=1DaMXHdmTmGg_SBvF9xE3E6rCjq8re7ys&sz=w1200',
       'https://drive.google.com/thumbnail?id=1JE7Cko_sA1ETZO09P5CbV2DMqSMDuZ6O&sz=w1200',
@@ -72,7 +73,6 @@ export const projectPages = [
     image: 'https://drive.google.com/thumbnail?id=1Qqyk2IP1SGYGXtHi5oTffTc8l1qZpkuv&sz=w1200',
     items: logoItems,
   },
-
   {
     slug: 'print-media',
     title: 'Print Media',
@@ -80,58 +80,41 @@ export const projectPages = [
     image: '/projects/print/print-media.jpg',
     items: [
       {
-          title: '',
+        title: 'Print Design 1',
         image: 'https://drive.google.com/thumbnail?id=1t-1HoRdyPwTDbCz9OO6RuYfsIw4TqD2R&sz=w1200',
         description: '',
       },
       {
-        title: '',
+        title: 'Print Design 2',
         image: 'https://drive.google.com/thumbnail?id=1lqHDTXfh61iURifW7GHKmn98hFdvYaBA&sz=w1200',
         description: '',
       },
       {
-        title: '',
+        title: 'Print Design 3',
         image: 'https://drive.google.com/thumbnail?id=1Qqyk2IP1SGYGXtHi5oTffTc8l1qZpkuv&sz=w1200',
         description: '',
       },
       {
-        title: '',
+        title: 'Print Design 4',
         image: 'https://drive.google.com/thumbnail?id=1U9A1TvkafoCam059g_hClwzZ9eYVfG_K&sz=w1200',
         description: '',
       },
     ],
   },
-
   {
     slug: 'booth-design',
     title: 'Booth Design',
     description: 'Exhibition concepts exploring branded environments and display layouts.',
     artwork: 'booth',
-    image: '/projects/booth/booth-design.jpg',
+    image: 'https://drive.google.com/thumbnail?id=19A7j3mSLmQy2CLg2yyCw6zrRWcMPoi9a&sz=w1200',
     items: [
       {
-        title: 'Exhibition Booth Concept',
-        image: '/projects/booth/exhibition-booth.jpg',
+        title: 'Grillora Booth',
+        image: 'https://drive.google.com/thumbnail?id=19A7j3mSLmQy2CLg2yyCw6zrRWcMPoi9a&sz=w1200',
         description: 'Exhibition booth design.',
-      },
-      {
-        title: 'Display Counter Concept',
-        image: '/projects/booth/display-counter.jpg',
-        description: 'Display counter design.',
-      },
-      {
-        title: 'Branded Backdrop Concept',
-        image: '/projects/booth/branded-backdrop.jpg',
-        description: 'Branded backdrop design.',
-      },
-      {
-        title: 'Spatial Layout Concept',
-        image: '/projects/booth/spatial-layout.jpg',
-        description: 'Spatial layout design.',
       },
     ],
   },
-
   {
     slug: 'product-packaging',
     title: 'Product Packaging',
@@ -139,18 +122,17 @@ export const projectPages = [
     image: '/projects/packaging/product-packaging.jpg',
     items: [
       {
-        title: '',
+        title: 'Packaging Design 1',
         image: 'https://drive.google.com/thumbnail?id=1w3nWhjaUy-9ymGwVlwh0KWJdSQdSahE9&sz=w1200',
         description: '',
       },
       {
-        title: '',
+        title: 'Packaging Design 2',
         image: 'https://drive.google.com/thumbnail?id=1aIb2j_WvDrD59vtZfUPDLTR2rT75kdl9&sz=w1200',
         description: '',
       },
     ],
   },
-
   {
     slug: 'ui-design',
     title: 'UI Design',
@@ -176,7 +158,6 @@ export const projectPages = [
       },
     ],
   },
-
   {
     slug: 'ux-design',
     title: 'UX Design',

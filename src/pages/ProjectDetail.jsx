@@ -44,6 +44,7 @@ export default function ProjectDetail({ project }) {
   const isUIDesign = project.slug === 'ui-design'
   const isUXDesign = project.slug === 'ux-design'
   const isUIUXDesign = isUIDesign || isUXDesign
+  const isBoothDesign = project.slug === 'booth-design'
 
   const items = isGestalt
     ? project.items.flatMap((item) =>
@@ -59,11 +60,13 @@ export default function ProjectDetail({ project }) {
       )
     : project.items
 
-  const gridClass = isLogoCategory
-    ? 'project-grid logo-category-grid'
-    : isGestalt
-      ? 'project-grid gestalt-grid'
-      : 'project-grid project-grid--two'
+  const gridClass = isBoothDesign
+    ? 'project-grid booth-design-grid'
+    : isLogoCategory
+      ? 'project-grid logo-category-grid'
+      : isGestalt
+        ? 'project-grid gestalt-grid'
+        : 'project-grid project-grid--two'
 
   const imageCount = isUIUXDesign
     ? project.items.reduce(

@@ -1342,3 +1342,14 @@ p {
     gap: 10px;
   }
 }
+
+/* Center the single Booth Design project */
+.booth-design-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.booth-design-grid .project-card {
+  width: 100%;
+  max-width: 700px;
+}
