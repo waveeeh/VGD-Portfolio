@@ -990,27 +990,7 @@ p {
 .project-card .artwork-link .project-image {
   min-height: 0;
   height: 100%;
-}
-
-/* CERTIFICATE GRID - 4 CARDS PER ROW */
-.certification-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-  align-items: start;
-}
-
-
-.certification-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-}
-
-.certification-card {
-  width: calc((100% - 72px) / 4);
-}
+} 
 
 .resume-block ul {
   padding-left: 20px;
@@ -1378,31 +1358,87 @@ p {
   max-width: 100%;
 }
 
-.certifications-intro {
-  max-width: 480px;
-  margin: 0 auto;
-  line-height: 1.7;
+.certifications-heading {
+  text-align: left;
+  max-width: 680px;
+  margin: 0 0 36px;
 }
 
+.certifications-heading .eyebrow {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.certifications-heading h2 {
+  margin: 0 0 14px;
+  text-align: left;
+  line-height: 1.2;
+  max-width: 100%;
+}
+
+.certifications-intro {
+  max-width: 480px;
+  margin: 0;
+  line-height: 1.7;
+  text-align: left;
+}
+
+
+/* CERTIFICATION GALLERY */
+.certifications-section {
+  padding-top: 64px;
+  padding-bottom: 72px;
+}
+
+/* Heading aligned to the left */
+.certifications-heading {
+  text-align: left;
+  max-width: 680px;
+  margin: 0 0 36px;
+}
+
+.certifications-heading .eyebrow {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.certifications-heading h2 {
+  margin: 0 0 14px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.certifications-intro {
+  max-width: 480px;
+  margin: 0;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* Desktop: four certificates per row */
 .certification-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 32px 24px;
   align-items: start;
 }
 
 .certification-card {
+  grid-column: span 3;
+  width: 100%;
   min-width: 0;
+  margin: 0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .certificate-image-wrapper {
   width: 100%;
   aspect-ratio: 4 / 3;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   background: #f5f2ed;
   border-radius: 8px;
 }
@@ -1423,18 +1459,38 @@ p {
   margin: 0;
   font-size: 15px;
   line-height: 1.5;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
-/* TABLETS */
-@media (max-width: 900px) {
+/* Center the final three certificates */
+@media (min-width: 901px) {
+  .certification-card:nth-child(5) {
+    grid-column: 2 / span 3;
+  }
+
+  .certification-card:nth-child(6) {
+    grid-column: 5 / span 3;
+  }
+
+  .certification-card:nth-child(7) {
+    grid-column: 8 / span 3;
+  }
+}
+
+/* Tablet: two columns */
+@media (min-width: 601px) and (max-width: 900px) {
   .certification-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
   }
+
+  .certification-card {
+    grid-column: auto;
+  }
 }
 
-/* MOBILE PHONES */
+/* Mobile: keep one certificate per row */
 @media (max-width: 600px) {
   .certifications-section {
     padding-top: 40px;
@@ -1443,17 +1499,6 @@ p {
 
   .certifications-heading {
     margin-bottom: 26px;
-    padding: 0 8px;
-  }
-
-  .certifications-heading h2 {
-    font-size: clamp(25px, 7vw, 32px);
-    line-height: 1.2;
-  }
-
-  .certifications-intro {
-    font-size: 14px;
-    line-height: 1.65;
   }
 
   .certification-grid {
@@ -1462,22 +1507,29 @@ p {
   }
 
   .certification-card {
+    grid-column: auto;
     width: 100%;
     max-width: 440px;
     margin: 0 auto;
   }
+}
 
-  .certificate-image-wrapper {
-    aspect-ratio: 4 / 3;
-    border-radius: 6px;
+/* Tablet */
+@media (max-width: 900px) {
+  .certification-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
   }
 
-  .certificate-info {
-    padding: 12px 8px 0;
+  .certification-card {
+    grid-column: auto;
   }
+}
 
-  .certificate-info h3 {
-    font-size: 15px;
-    line-height: 1.5;
+/* Mobile — preserve your current layout */
+@media (max-width: 600px) {
+  .certification-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
   }
 }
