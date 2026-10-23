@@ -1353,3 +1353,131 @@ p {
   width: 100%;
   max-width: 700px;
 }
+
+/* CERTIFICATION GALLERY */
+.certifications-section {
+  padding-top: 64px;
+  padding-bottom: 72px;
+}
+
+.certifications-heading {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+.certifications-heading .eyebrow {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.certifications-heading h2 {
+  margin: 0 auto 14px;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 100%;
+}
+
+.certifications-intro {
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.certification-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.certificate-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f2ed;
+  border-radius: 8px;
+}
+
+.certificate-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.certificate-info {
+  padding: 14px 4px 0;
+  text-align: center;
+}
+
+.certificate-info h3 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .certification-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 600px) {
+  .certifications-section {
+    padding-top: 40px;
+    padding-bottom: 44px;
+  }
+
+  .certifications-heading {
+    margin-bottom: 26px;
+    padding: 0 8px;
+  }
+
+  .certifications-heading h2 {
+    font-size: clamp(25px, 7vw, 32px);
+    line-height: 1.2;
+  }
+
+  .certifications-intro {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .certification-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .certification-card {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .certificate-image-wrapper {
+    aspect-ratio: 4 / 3;
+    border-radius: 6px;
+  }
+
+  .certificate-info {
+    padding: 12px 8px 0;
+  }
+
+  .certificate-info h3 {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}

@@ -116,49 +116,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CERTIFICATION GALLERY */}
-      <section className="certifications-section container">
-        <div className="certifications-heading">
-          <div>
-            <br></br>
+      
+        {/* CERTIFICATION GALLERY */}
+        <section className="certifications-section container">
+          <div className="certifications-heading">
             <p className="eyebrow">
               DOCUMENTATION
             </p>
 
-            <h2>
-              Certificates and Achievements
-            </h2>
+            <h2>Certificates and Achievements</h2>
+
+            <p className="certifications-intro">
+              A visual collection of training documents,
+              certificates, and achievements.
+            </p>
           </div>
 
-          <p>
-            A visual collection of training documents,
-            certificates, and achievements.
-          </p>
-        </div>
+          <div className="certification-grid">
+            {certifications.map((certificate) => (
+              <article
+                className="certification-card"
+                key={certificate.title}
+              >
+                <div className="certificate-image-wrapper">
+                  <img
+                    src={certificate.image}
+                    alt={certificate.title}
+                    loading="lazy"
+                  />
+                </div>
 
-        <div className="certification-grid">
-          {certifications.map((certificate, index) => (
-            <article
-              className="certification-card"
-              key={certificate.title}
-            >
-              <div className="certificate-image-wrapper">
-                <img
-                  src={certificate.image}
-                  alt={certificate.title}
-                  loading="lazy"
-                />
-              </div>
+                <div className="certificate-info">
+                  <h3>{certificate.title}</h3>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
-              <div className="certificate-info">
-                <h3>{certificate.title}</h3>
-
-                <p>{certificate.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
     </>
   )
 }
